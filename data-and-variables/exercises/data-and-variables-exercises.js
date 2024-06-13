@@ -38,8 +38,3 @@ let daysToMoon = hoursToMoon / 24;
 
 // Print the results of the trip to the moon below
 console.log(spaceShuttleName + " will take " + daysToMoon + " days to reach the Moon");
-
-
-
-console.log(2 ** 2 ** 3 * 3);
-
