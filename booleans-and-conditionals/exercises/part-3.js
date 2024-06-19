@@ -30,7 +30,7 @@ if (fuelLevel < 1000 || engineTemperature > 3500 || engineIndicatorLight === "re
        console.log("Fuel level above 50%. Engines good.");
        }
        else if (fuelLevel > 5000){
-       console.log("Fuel level above 25%. Engines good.")
+       console.log("Fuel level above 25%. Engines good.");
        }
  }  else {
     console.log("Fuel and engine status pending...");

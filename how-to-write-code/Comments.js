@@ -9,4 +9,10 @@
    multi-line
    comments. */
 
+   // Adding comment here
+
+   /*
    console.log("Comments make your code more readable by others.");
+
+   console.log("here is a string before commenting")
+   */
