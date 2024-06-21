@@ -18,9 +18,6 @@ let preparedForLiftoff = true;
 
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
 
-if (astronautCount <= 7 && astronautStatus === 'ready' && totalMassKg < maximumMassLimit && (fuelTempCelcius >= minimumFuelTemp && fuelTempCelcius <= maximumFuelTemp) && fuelLevel === "100%" && weatherStatus === "clear") {
-    console.log('pass');}
-
 if (astronautCount > 7){
     preparedForLiftoff = false;
 }
