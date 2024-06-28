@@ -3,12 +3,21 @@
 // Part One: Reverse Characters
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
-// 2. Within the function, split the string into an array, then reverse the array.
+// 2. Within the function, split the string into an array, then reverse the array
 // 3. Use join to create the reversed string and return that string from the function.
 // 4. Below the function, define and initialize a variable to hold a string.
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
+/*
+function reverseCharacters(text){
+   return text.split("").reverse().join("")
+}
 
+myVariableName = "Reverse Reverse!"
+
+console.log(reverseCharacters(myVariableName));
+
+*/
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -16,6 +25,27 @@
 // 3. If typeof is ’number’, convert the parameter to a string, reverse the characters, then convert it back into a number.
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
+
+/*
+function reverseCharacters(text){
+    let newText;
+
+    if (typeof(text) === "string"){
+        newText = text.split("").reverse().join("");
+    }else if (typeof(text) === "number") {
+        newText = Number(String(text).split("").reverse().join(""));
+    }
+    
+    return newText
+ }
+ 
+ myVariableName = "1234";
+ 
+ console.log(reverseCharacters(myVariableName));
+*/
+
+
+
 
 // Part Three: Complete Reversal
 
@@ -25,17 +55,46 @@
 // 4. Add the reversed string (or number) to the array defined in part ‘a’.
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
-
+/*
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+let arrayTest4 = [123, 8897, 42, 1138, 8675309]
 
+function reverseArray(oldArray){
+    let newArray = [];
+
+    for (let i = 0; i < oldArray.length; i++){
+        newArray.push(reverseCharacters(oldArray[i]))
+    }
+
+    return newArray.reverse();
+
+}
+
+console.log(reverseArray(arrayTest4))
+*/
 // Bonus Missions
 
 // 1. Have a clear, descriptive name like funPhrase.
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
+
+function funPhrase(text){
+    let newText;
+    if (text.length <= 3){
+        newText = text.slice(-1);
+    }else{
+        newText = text.slice(0, 3);
+    }
+    return newText;
+}
+
+testString1 = "to";
+testString2 = "longer string";
+
+console.log(funPhrase(testString2));
 
 // Test Function
 
@@ -49,3 +108,4 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
