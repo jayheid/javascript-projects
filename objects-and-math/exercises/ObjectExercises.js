@@ -3,7 +3,7 @@ let superChimpOne = {
    species: "Chimpanzee",
    mass: 9,
    age: 6,
-   move : function() {
+   move: function() {
       return Math.floor(Math.random()*11);
    }
 };
@@ -13,7 +13,7 @@ let salamander = {
    species: "Axolotl Salamander",
    mass: 0.1,
    age: 5,
-   move : function() {
+   move: function() {
       return Math.floor(Math.random()*11);
    }
 };
@@ -25,7 +25,7 @@ let chimpTwo = {
    species: "Chimpanzee",
    mass: 11,
    age: 6,
-   move : function() {
+   move: function() {
       return Math.floor(Math.random()*11);
    }
 };
@@ -35,7 +35,7 @@ let beagleOne = {
    species: "Beagle",
    mass: 14,
    age: 5,
-   move : function() {
+   move: function() {
       return Math.floor(Math.random()*11);
    }
 };
@@ -45,7 +45,7 @@ let tardrigradeOne = {
    species: "Tardigrade",
    mass: 0.0000000001,
    age: 1,
-   move : function() {
+   move: function() {
       return Math.floor(Math.random()*11);
    }
 };
@@ -84,14 +84,19 @@ function fitnessTest(arr){
          moveLength += crew[i].move();
       }
    
+   // add total number of moves for crew member to list
    moveAttempts.push(j);  
    }
    
-   return moveAttempts;
+   // create test result for output
+   testResults = "";
+      
+   for (i = 0; i < crew.length; i++){
+      testResults += `${crew[i].name} took ${moveAttempts[i]} turns to take 20 steps.\n`; 
+     }
+
+   return testResults;
 }
 
-crewFitnessTest = fitnessTest(crew);
-
-for (i = 0; i < crew.length; i++){
- console.log(`${crew[i].name} took ${crewFitnessTest[i]} turns to take 20 steps.`); 
-}
+// run test fitness test for crew
+console.log(fitnessTest(crew));
