@@ -65,5 +65,3 @@ function sortArray2(numArray){
 }
 
 console.log(sortArray2(nums1));
-
-// create new array in recursive function?
