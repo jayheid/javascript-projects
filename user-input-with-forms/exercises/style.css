@@ -1,1 +1,9 @@
-/*/ Code Your Solution Below /*/
+label {
+  display: block;
+  margin-bottom: 7px;
+}
+
+form {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+}
